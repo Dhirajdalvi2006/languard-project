@@ -1,0 +1,1057 @@
+/* ============================================================
+   LANDGUARD AI — PREMIUM DARK COMMAND CENTER DESIGN SYSTEM
+   Government-Grade Infrastructure Intelligence Platform
+   Version 3.5 — Palantir-Style Decision Support Command Room
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* ============================================================
+   DESIGN TOKENS — DARK COMMAND CENTER
+   ============================================================ */
+
+:root {
+  --bg-void: #050709;
+  --bg-base: #0a0d12;
+  --bg-elevated: #0f141a;
+  --bg-surface: #141a22;
+  --bg-overlay: #1a222e;
+  
+  --surface-1: #0d1218;
+  --surface-2: #131a23;
+  --surface-3: #1a2330;
+  --surface-4: #222d3d;
+  
+  --grid-line: rgba(0, 212, 255, 0.035);
+  --grid-strong: rgba(0, 212, 255, 0.08);
+  
+  --accent-primary: #00d4ff;
+  --accent-primary-rgb: 0, 212, 255;
+  --accent-primary-dim: #0099cc;
+  --accent-primary-glow: rgba(0, 212, 255, 0.12);
+  --accent-primary-strong: rgba(0, 212, 255, 0.28);
+  
+  --accent-secondary: #8b5cf6;
+  --accent-secondary-rgb: 139, 92, 246;
+  --accent-secondary-dim: #6d28d9;
+  --accent-secondary-glow: rgba(139, 92, 246, 0.15);
+  
+  --risk-low: #10b981;
+  --risk-low-rgb: 16, 185, 129;
+  --risk-low-bg: rgba(16, 185, 129, 0.08);
+  --risk-low-border: rgba(16, 185, 129, 0.3);
+  --risk-low-glow: rgba(16, 185, 129, 0.2);
+  
+  --risk-medium: #f59e0b;
+  --risk-medium-rgb: 245, 158, 11;
+  --risk-medium-bg: rgba(245, 158, 11, 0.08);
+  --risk-medium-border: rgba(245, 158, 11, 0.3);
+  --risk-medium-glow: rgba(245, 158, 11, 0.2);
+  
+  --risk-high: #ef4444;
+  --risk-high-rgb: 239, 68, 68;
+  --risk-high-bg: rgba(239, 68, 68, 0.08);
+  --risk-high-border: rgba(239, 68, 68, 0.3);
+  --risk-high-glow: rgba(239, 68, 68, 0.2);
+  
+  --text-primary: #f0f4f8;
+  --text-secondary: #8b9cb3;
+  --text-muted: #5a6b7d;
+  --text-disabled: #3d4a5c;
+  
+  --border-subtle: rgba(0, 212, 255, 0.09);
+  --border-default: rgba(0, 212, 255, 0.18);
+  --border-strong: rgba(0, 212, 255, 0.35);
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.45);
+  --shadow-md: 0 4px 18px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.65);
+  --shadow-glow: 0 0 35px rgba(0, 212, 255, 0.09);
+  --shadow-glow-strong: 0 0 50px rgba(0, 212, 255, 0.18);
+  
+  --transition-fast: 120ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  --font-display: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  --space-2xs: 2px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+}
+
+/* ============================================================
+   BASE RESET & GLOBAL STYLES
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+body, .stApp {
+  font-family: var(--font-sans);
+  background: var(--bg-void);
+  color: var(--text-primary);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  font-variant-numeric: tabular-nums;
+}
+
+.stApp::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  opacity: 0.7;
+  z-index: -2;
+}
+
+.stApp::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 380px;
+  background: radial-gradient(ellipse 70% 50% at 50% 0%, var(--accent-primary-glow), transparent);
+  pointer-events: none;
+  z-index: -1;
+}
+
+[data-testid="stHeader"] {
+  background: transparent !important;
+  height: 0;
+  min-height: 0;
+  padding: 0;
+}
+
+[data-testid="stToolbar"], 
+[data-testid="stHeaderActionElements"],
+.stDeployButton, #MainMenu, footer {
+  display: none !important;
+  visibility: hidden;
+  height: 0;
+}
+
+[data-testid="stSidebarCollapseButton"],
+[data-testid="stSidebarCollapsedControl"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.block-container,
+[data-testid="stMainBlockContainer"] {
+  max-width: 100%;
+  padding: 0 0 var(--space-2xl) 0;
+  background: transparent;
+}
+
+[data-testid="stMain"] {
+  padding: 0;
+}
+
+/* ============================================================
+   TOP APPLICATION SHELL & STATUS HUD
+   ============================================================ */
+
+.lg-top-hud {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 28px;
+  background: rgba(10, 13, 18, 0.95);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.lg-hud-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.lg-hud-emblem {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  border-radius: var(--radius-md);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--bg-void);
+  box-shadow: 0 0 20px var(--accent-primary-glow);
+}
+
+.lg-hud-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.lg-hud-name {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  line-height: 1.15;
+}
+
+.lg-hud-tagline {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.lg-hud-telemetry {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.lg-hud-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  background: var(--surface-2);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  font-size: 11px;
+}
+
+.lg-hud-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--risk-low);
+  box-shadow: 0 0 8px var(--risk-low-glow);
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+.lg-hud-label {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.lg-hud-val {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* ============================================================
+   SIDEBAR COMMAND DRAWER
+   ============================================================ */
+
+section[data-testid="stSidebar"] {
+  background: var(--bg-base) !important;
+  border-right: 1px solid var(--border-subtle) !important;
+  width: 270px !important;
+}
+
+section[data-testid="stSidebar"] > div:first-child {
+  padding-top: var(--space-md);
+}
+
+section[data-testid="stSidebar"] [role="radiogroup"] label {
+  min-height: 38px;
+  padding: 6px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  background: transparent;
+  transition: all var(--transition-fast);
+  margin-bottom: 2px;
+}
+
+section[data-testid="stSidebar"] [role="radiogroup"] label:hover {
+  background: var(--surface-2);
+  border-color: var(--border-subtle);
+}
+
+section[data-testid="stSidebar"] [role="radiogroup"] label:has(input:checked) {
+  background: var(--accent-primary-glow) !important;
+  border-color: var(--accent-primary) !important;
+  color: var(--accent-primary) !important;
+}
+
+section[data-testid="stSidebar"] hr {
+  border-color: var(--border-subtle);
+  margin: var(--space-md) 0;
+}
+
+/* ============================================================
+   HERO / EXECUTIVE BANNER
+   ============================================================ */
+
+.lg-hero {
+  padding: 32px 36px 24px;
+  background: 
+    radial-gradient(ellipse 800px 300px at 15% 15%, var(--accent-primary-glow), transparent),
+    radial-gradient(ellipse 500px 250px at 85% 85%, var(--accent-secondary-glow), transparent),
+    var(--bg-elevated);
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.lg-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary));
+}
+
+.lg-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+  margin-bottom: 8px;
+}
+
+.lg-hero-h1 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+}
+
+.lg-hero-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  max-width: 780px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   PALANTIR-STYLE TELEMETRY HUD / KPI CARDS
+   ============================================================ */
+
+.lg-telemetry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
+  padding: 18px 36px;
+  background: var(--bg-base);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.lg-telemetry-card {
+  padding: 14px 16px;
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.lg-telemetry-card:hover {
+  border-color: var(--border-default);
+  background: var(--surface-2);
+  transform: translateY(-1px);
+}
+
+.lg-telemetry-card.danger {
+  border-left: 3px solid var(--risk-high);
+}
+
+.lg-telemetry-card.warning {
+  border-left: 3px solid var(--risk-medium);
+}
+
+.lg-telemetry-card.accent {
+  border-left: 3px solid var(--accent-primary);
+}
+
+.lg-telemetry-card.success {
+  border-left: 3px solid var(--risk-low);
+}
+
+.lg-telemetry-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.lg-telemetry-val {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 3px;
+}
+
+.lg-telemetry-card.danger .lg-telemetry-val { color: var(--risk-high); }
+.lg-telemetry-card.warning .lg-telemetry-val { color: var(--risk-medium); }
+.lg-telemetry-card.accent .lg-telemetry-val { color: var(--accent-primary); }
+.lg-telemetry-card.success .lg-telemetry-val { color: var(--risk-low); }
+
+.lg-telemetry-sub {
+  font-size: 10px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================================================
+   SECTION HEADINGS & EYEBROWS
+   ============================================================ */
+
+.lg-section-head {
+  margin-bottom: 14px;
+}
+
+.lg-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+  margin-bottom: 3px;
+}
+
+.lg-section-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 3px 0;
+}
+
+.lg-section-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ============================================================
+   CINEMATIC RISK GAUGE & DIAL
+   ============================================================ */
+
+.lg-dial-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 22px 24px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  margin-bottom: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.lg-dial-circle {
+  width: 130px;
+  height: 130px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.lg-dial-inner {
+  position: absolute;
+  inset: 12px;
+  background: var(--surface-1);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid var(--border-subtle);
+}
+
+.lg-dial-pct {
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.lg-dial-sub {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.lg-dial-meta {
+  flex: 1;
+}
+
+.lg-tier-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: var(--radius-md);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.lg-tier-chip.high {
+  background: var(--risk-high-bg);
+  color: var(--risk-high);
+  border: 1px solid var(--risk-high-border);
+}
+
+.lg-tier-chip.medium {
+  background: var(--risk-medium-bg);
+  color: var(--risk-medium);
+  border: 1px solid var(--risk-medium-border);
+}
+
+.lg-tier-chip.low {
+  background: var(--risk-low-bg);
+  color: var(--risk-low);
+  border: 1px solid var(--risk-low-border);
+}
+
+/* ============================================================
+   CENTER-ZERO BILATERAL DIVERGING SHAP WATERFALL
+   ============================================================ */
+
+.lg-shap-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 20px 24px;
+  margin-bottom: 18px;
+}
+
+.lg-shap-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.lg-shap-waterfall {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lg-shap-row {
+  display: grid;
+  grid-template-columns: 210px 1fr 1fr 68px;
+  align-items: center;
+  gap: 0;
+  padding: 7px 12px;
+  background: var(--surface-1);
+  border: 1px solid rgba(0, 212, 255, 0.04);
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.lg-shap-row::before {
+  content: '';
+  position: absolute;
+  left: calc(210px + 50%);
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: rgba(0, 212, 255, 0.25);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.lg-shap-row:hover {
+  background: var(--surface-2);
+  border-color: var(--border-default);
+}
+
+.lg-shap-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lg-shap-cat {
+  font-size: 9px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.lg-shap-left-track {
+  display: flex;
+  justify-content: flex-end;
+  height: 10px;
+  background: var(--surface-3);
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  overflow: hidden;
+}
+
+.lg-shap-right-track {
+  display: flex;
+  justify-content: flex-start;
+  height: 10px;
+  background: var(--surface-3);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  overflow: hidden;
+}
+
+.lg-shap-neg-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #059669, var(--risk-low));
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+
+.lg-shap-pos-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--risk-high), #dc2626);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.lg-shap-val {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.lg-shap-val.pos { color: var(--risk-high); }
+.lg-shap-val.neg { color: var(--risk-low); }
+
+/* ============================================================
+   STATUTORY 9-STAGE PROCESS TIMELINE RAIL
+   ============================================================ */
+
+.lg-statutory-rail {
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+  padding: 16px 20px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.lg-rail-step {
+  flex: 1;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px 6px;
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.lg-rail-step.completed {
+  border-color: var(--risk-low-border);
+  background: var(--risk-low-bg);
+}
+
+.lg-rail-step.current {
+  border-color: var(--accent-primary);
+  background: var(--accent-primary-glow);
+  box-shadow: 0 0 15px var(--accent-primary-glow);
+}
+
+.lg-rail-step.delayed {
+  border-color: var(--risk-high-border);
+  background: var(--risk-high-bg);
+}
+
+.lg-rail-step.pending {
+  border-color: var(--border-default);
+  background: var(--surface-2);
+}
+
+.lg-rail-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  background: var(--surface-3);
+  color: var(--text-muted);
+}
+
+.lg-rail-step.completed .lg-rail-num {
+  background: var(--risk-low);
+  color: #000;
+}
+
+.lg-rail-step.current .lg-rail-num {
+  background: var(--accent-primary);
+  color: #000;
+}
+
+.lg-rail-step.delayed .lg-rail-num {
+  background: var(--risk-high);
+  color: #fff;
+}
+
+.lg-rail-name {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin-bottom: 3px;
+}
+
+.lg-rail-badge {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.lg-rail-step.completed .lg-rail-badge { color: var(--risk-low); }
+.lg-rail-step.current .lg-rail-badge { color: var(--accent-primary); }
+.lg-rail-step.delayed .lg-rail-badge { color: var(--risk-high); }
+
+/* ============================================================
+   PROJECT HEALTH MATRIX (8 DIMENSIONS)
+   ============================================================ */
+
+.lg-health-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.lg-health-box {
+  padding: 10px 8px;
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.lg-health-box.healthy {
+  border-color: var(--risk-low-border);
+  background: var(--risk-low-bg);
+}
+
+.lg-health-box.watch {
+  border-color: var(--risk-medium-border);
+  background: var(--risk-medium-bg);
+}
+
+.lg-health-box.critical {
+  border-color: var(--risk-high-border);
+  background: var(--risk-high-bg);
+}
+
+.lg-health-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.lg-health-state {
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.lg-health-box.healthy .lg-health-state { color: var(--risk-low); }
+.lg-health-box.watch .lg-health-state { color: var(--risk-medium); }
+.lg-health-box.critical .lg-health-state { color: var(--risk-high); }
+
+/* ============================================================
+   OFFICIAL INTERVENTION DIRECTIVE CARDS
+   ============================================================ */
+
+.lg-directive-card {
+  padding: 16px 20px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  margin-bottom: 12px;
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.lg-directive-card:hover {
+  border-color: var(--border-default);
+  transform: translateX(3px);
+}
+
+.lg-directive-card.high {
+  border-left: 4px solid var(--risk-high);
+  background: linear-gradient(90deg, var(--risk-high-bg), var(--bg-elevated) 45%);
+}
+
+.lg-directive-card.medium {
+  border-left: 4px solid var(--risk-medium);
+  background: linear-gradient(90deg, var(--risk-medium-bg), var(--bg-elevated) 45%);
+}
+
+.lg-directive-card.low {
+  border-left: 4px solid var(--risk-low);
+  background: linear-gradient(90deg, var(--risk-low-bg), var(--bg-elevated) 45%);
+}
+
+.lg-directive-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.lg-directive-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.lg-directive-body {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+
+.lg-directive-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.lg-authority-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+/* ============================================================
+   WHAT-IF SIMULATION HUD
+   ============================================================ */
+
+.lg-sim-hud {
+  padding: 20px 24px;
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  margin-top: 14px;
+}
+
+.lg-sim-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  text-align: center;
+}
+
+.lg-sim-box {
+  padding: 12px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.lg-sim-num {
+  font-family: var(--font-mono);
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+/* ============================================================
+   DATA TRUST CENTER METRICS & AUDIT
+   ============================================================ */
+
+.lg-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.lg-trust-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.lg-trust-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.lg-trust-icon.ok {
+  background: var(--risk-low-bg);
+  color: var(--risk-low);
+  border: 1px solid var(--risk-low-border);
+}
+
+.lg-trust-icon.brand {
+  background: var(--accent-primary-glow);
+  color: var(--accent-primary);
+  border: 1px solid var(--border-default);
+}
+
+.lg-trust-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.lg-trust-sub {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* ============================================================
+   FORM CONTROLS & STREAMLIT OVERRIDES
+   ============================================================ */
+
+[data-baseweb="select"] > div,
+[data-baseweb="input"] > div {
+  min-height: 38px !important;
+  background: var(--surface-1) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: var(--radius-md) !important;
+}
+
+[data-baseweb="select"] > div:focus-within,
+[data-baseweb="input"] > div:focus-within {
+  border-color: var(--accent-primary) !important;
+  box-shadow: 0 0 0 2px var(--accent-primary-glow) !important;
+}
+
+label[data-testid="stWidgetLabel"] p,
+[data-testid="stWidgetLabel"] p {
+  color: var(--text-muted) !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.stButton > button {
+  min-height: 38px;
+  padding: 0 18px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+/* Streamlit Dataframe Dark styling */
+[data-testid="stDataFrame"] {
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: var(--radius-md) !important;
+  background: var(--bg-elevated) !important;
+}
+
+/* ============================================================
+   RESPONSIVENESS
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .lg-telemetry-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 12px 18px;
+  }
+  .lg-dial-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .lg-shap-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}

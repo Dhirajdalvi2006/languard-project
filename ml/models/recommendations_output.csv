@@ -1,0 +1,8 @@
+project_id,snapshot_id,risk_probability,risk_level,risk_driver,category,priority,recommended_action,reason
+SIH26017-PRJ-000290,SNAP-000290-1,0.9609301686286926,HIGH,Land ownership disputes,Land Records,HIGH,Initiate focused review of disputed ownership records and pending mutations.,37.8% of land is marked as disputed ownership.
+SIH26017-PRJ-000290,SNAP-000290-1,0.9609301686286926,HIGH,Accumulated stage delay,Process / Stage,HIGH,Review the delayed critical-path stage and initiate escalation with the responsible authority.,472 days of cumulative stage delay are recorded.
+SIH26017-PRJ-000290,SNAP-000290-1,0.9609301686286926,HIGH,Compensation backlog,Compensation,HIGH,Prioritize verification and processing of pending compensation cases.,Only 1.3% of compensation is recorded as disbursed.
+SIH26017-PRJ-000290,SNAP-000290-1,0.9609301686286926,HIGH,R&R grievance backlog,R&R,HIGH,Prioritize unresolved R&R grievances and review grievance-resolution turnaround.,12 unresolved R&R grievances are recorded.
+SIH26017-PRJ-000290,SNAP-000290-1,0.9609301686286926,HIGH,Low R&R progress,R&R,MEDIUM,Review resettlement progress and identify pending beneficiary actions.,Only 0.0% of affected families are recorded as resettled.
+SIH26017-PRJ-000290,SNAP-000290-1,0.9609301686286926,HIGH,High officer turnover,Administration,MEDIUM,Conduct an administrative continuity review and ensure pending cases are properly handed over.,8 officer changes are recorded for the period.
+SIH26017-PRJ-000290,SNAP-000290-1,0.9609301686286926,HIGH,High public objections,Stakeholder,MEDIUM,Review major objections raised during public consultation and prioritize unresolved issues.,64 public-hearing objections are recorded.

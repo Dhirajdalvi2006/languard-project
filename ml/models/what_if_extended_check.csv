@@ -1,0 +1,4 @@
+intervention,description,average_risk_before,average_risk_after,average_change_pp,median_change_pp,risk_decreased_percent,risk_increased_percent,risk_unchanged_percent
+Recover Stage Delay,Reduce accumulated stage delay by 100 days,0.1632832,0.15817742,-0.5105792,0.0,48.80174291938998,9.368191721132897,41.830065359477125
+Improve R&R Resettlement,Increase families resettled by 30 percentage points,0.1632832,0.16868964,0.5406408,0.0018002,38.56209150326798,50.76252723311547,10.675381263616558
+Improve Officer Continuity,Reduce officer turnover count by 2,0.1632832,0.16200972,-0.12734951,0.0,13.943355119825709,41.830065359477125,44.226579520697165

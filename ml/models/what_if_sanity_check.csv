@@ -1,0 +1,5 @@
+intervention,description,average_risk_before,average_risk_after,average_change,median_change,percent_decreased,percent_increased,percent_unchanged
+Improve Land Title Clarity,Increase clear-title coverage by 25 percentage points,0.1632832,0.13494287,-0.028340328,-0.0011782655,68.1917211328976,3.2679738562091507,28.540305010893245
+Accelerate Compensation,Increase compensation disbursement by 40 percentage points,0.1632832,0.16321678,-6.643562e-05,3.1865202e-05,20.47930283224401,55.33769063180828,24.18300653594771
+Resolve R&R Grievances,Reduce unresolved R&R grievances by 8 cases,0.1632832,0.16738838,0.0041051605,0.0,3.485838779956427,16.55773420479303,79.95642701525054
+Clear Pending Approvals,Resolve up to two pending approvals,0.1632832,0.1632832,0.0,0.0,0.0,0.0,100.0

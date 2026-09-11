@@ -1,0 +1,186 @@
+feature,shap_value,abs_shap
+numeric__planned_land_acquisition_duration_days,1.9748971,1.9748971
+numeric__total_land_required_hectares,1.1016675,1.1016675
+numeric__percent_land_clear_title,-0.472765,0.472765
+numeric__percent_land_disputed_ownership,-0.46287057,0.46287057
+numeric__planned_land_acquisition_completion_date_dayofyear,-0.40222204,0.40222204
+numeric__cumulative_stage_delay_days_as_of_snapshot,0.38149604,0.38149604
+numeric__project_type_historical_delay_rate,0.27492744,0.27492744
+categorical__land_type_required_Agricultural,0.224007,0.224007
+numeric__rr_grievance_backlog_as_of_snapshot,-0.22361854,0.22361854
+numeric__snapshot_date_year,0.19469719,0.19469719
+numeric__planned_land_acquisition_completion_date_year,0.1648602,0.1648602
+numeric__number_of_displaced_families,-0.15220407,0.15220407
+numeric__estimated_project_cost_inr_crore,0.13521707,0.13521707
+numeric__state_historical_avg_delay_days,0.11248131,0.11248131
+numeric__snapshot_date_dayofyear,-0.102864996,0.102864996
+categorical__land_record_digitization_status_Fully Digitized,-0.09829345,0.09829345
+categorical__land_record_digitization_status_Not Digitized,0.09230634,0.09230634
+numeric__planned_land_acquisition_completion_date_month,-0.087116204,0.087116204
+numeric__approvals_required_count,-0.08537359,0.08537359
+numeric__number_of_villages_affected,0.08250412,0.08250412
+categorical__current_stage_name_Compensation Disbursement,0.079414785,0.079414785
+categorical__funds_availability_status_as_of_snapshot_Insufficient,0.07653256,0.07653256
+categorical__land_type_required_Homestead-Residential,0.073740825,0.073740825
+numeric__percent_families_resettled_as_of_snapshot,-0.06899327,0.06899327
+numeric__public_hearing_objections_count,-0.066324055,0.066324055
+numeric__project_sanction_date_year,0.060871013,0.060871013
+categorical__local_body_resolution_status_Neutral,0.053945832,0.053945832
+numeric__approvals_approved_count_as_of_snapshot,-0.04938597,0.04938597
+numeric__officer_turnover_count_as_of_snapshot,0.048304223,0.048304223
+numeric__agency_historical_completion_rate,0.042965792,0.042965792
+numeric__project_sanction_date_month,-0.031049673,0.031049673
+numeric__missingindicator_state_historical_avg_delay_days,0.023891507,0.023891507
+numeric__snapshot_date_month,-0.023512367,0.023512367
+numeric__active_legal_cases_count_as_of_snapshot,-0.022199064,0.022199064
+numeric__budget_utilization_percent_as_of_snapshot,0.02101135,0.02101135
+categorical__local_body_resolution_status_Opposing,0.019074662,0.019074662
+"categorical__applicable_land_acquisition_act_RFCTLARR Act, 2013",-0.018616766,0.018616766
+categorical__funds_availability_status_as_of_snapshot_Delayed,-0.015920803,0.015920803
+categorical__e_governance_system_used_flag_False,0.013179833,0.013179833
+numeric__project_sanction_date_dayofyear,-0.011096537,0.011096537
+categorical__political_sensitivity_index_Medium,-0.009931467,0.009931467
+categorical__land_record_digitization_status_Partially Digitized,0.009371353,0.009371353
+categorical__land_type_required_Forest,0.008966022,0.008966022
+categorical__project_geometry_type_Linear,0.008801834,0.008801834
+categorical__next_stage_name_at_snapshot_Award Declaration (Sec 23),-0.0070705647,0.0070705647
+categorical__political_sensitivity_index_Low,-0.0059265606,0.0059265606
+numeric__days_since_sanction_at_snapshot,0.005851439,0.005851439
+categorical__e_governance_system_used_flag_True,-0.005679782,0.005679782
+numeric__missingindicator_agency_historical_completion_rate,0.0055309907,0.0055309907
+categorical__current_stage_name_Award Declaration (Sec 23),-0.0044482267,0.0044482267
+categorical__project_type_Urban Water Supply/Sewerage,0.0038020716,0.0038020716
+categorical__state_Bihar,-0.0036509833,0.0036509833
+categorical__state_Gujarat,-0.0031303866,0.0031303866
+numeric__percent_compensation_disbursed_as_of_snapshot,-0.002293772,0.002293772
+categorical__project_type_Airport Expansion,-0.002115518,0.002115518
+categorical__district_Kolkata,-0.0018990596,0.0018990596
+categorical__next_stage_name_at_snapshot_Compensation Disbursement,0.0018353692,0.0018353692
+categorical__next_stage_name_at_snapshot_Possession,-0.0014671409,0.0014671409
+categorical__project_type_National Highway,-0.0012217388,0.0012217388
+numeric__percent_stages_completed_as_of_snapshot,-0.0011934441,0.0011934441
+categorical__land_type_required_Government-Wasteland,0.0011469799,0.0011469799
+categorical__current_stage_name_Social Impact Assessment (SIA),-0.0009308981,0.0009308981
+categorical__state_Telangana,0.0,0.0
+categorical__state_Uttar Pradesh,0.0,0.0
+categorical__state_West Bengal,0.0,0.0
+categorical__district_Alwar,0.0,0.0
+categorical__district_Ahmedabad,0.0,0.0
+categorical__district_Agra,0.0,0.0
+categorical__state_Kerala,0.0,0.0
+categorical__state_Karnataka,0.0,0.0
+categorical__state_Jharkhand,0.0,0.0
+categorical__state_Chhattisgarh,0.0,0.0
+categorical__state_Assam,0.0,0.0
+numeric__missingindicator_consent_percent_obtained,0.0,0.0
+numeric__missingindicator_project_type_historical_delay_rate,0.0,0.0
+numeric__next_stage_at_snapshot,0.0,0.0
+numeric__approvals_pending_count_as_of_snapshot,0.0,0.0
+numeric__consent_percent_obtained,0.0,0.0
+numeric__current_stage_number,0.0,0.0
+categorical__state_Tamil Nadu,0.0,0.0
+categorical__state_Rajasthan,0.0,0.0
+categorical__state_Odisha,0.0,0.0
+categorical__state_Maharashtra,0.0,0.0
+categorical__state_Madhya Pradesh,0.0,0.0
+categorical__district_Cuttack,0.0,0.0
+categorical__district_Bhopal,0.0,0.0
+categorical__district_Ballari,0.0,0.0
+categorical__district_Belagavi,0.0,0.0
+categorical__district_Bastar,0.0,0.0
+categorical__district_Paschimi Singhbhum,0.0,0.0
+categorical__district_Nashik,0.0,0.0
+categorical__district_Nagpur,0.0,0.0
+categorical__district_Patna,0.0,0.0
+categorical__district_Raipur,0.0,0.0
+categorical__district_Rajkot,0.0,0.0
+categorical__district_Purba Bardhaman,0.0,0.0
+categorical__district_Pune,0.0,0.0
+categorical__district_Sundargarh,0.0,0.0
+categorical__district_Dhanbad,0.0,0.0
+categorical__district_Dibrugarh,0.0,0.0
+categorical__district_Durg,0.0,0.0
+categorical__district_Ernakulam,0.0,0.0
+categorical__district_Chennai,0.0,0.0
+categorical__district_Chhatrapati Sambhajinagar,0.0,0.0
+categorical__district_Bengaluru Rural,0.0,0.0
+categorical__district_Howrah,0.0,0.0
+categorical__district_Hyderabad,0.0,0.0
+categorical__district_Jabalpur,0.0,0.0
+categorical__district_Indore,0.0,0.0
+categorical__district_Jodhpur,0.0,0.0
+categorical__district_Kalahandi,0.0,0.0
+categorical__district_Kamrup,0.0,0.0
+categorical__district_Jaipur,0.0,0.0
+categorical__district_Karimnagar,0.0,0.0
+categorical__district_Khordha,0.0,0.0
+categorical__district_Lucknow,0.0,0.0
+categorical__district_Madurai,0.0,0.0
+categorical__district_Muzaffarpur,0.0,0.0
+categorical__district_Gautam Buddh Nagar,0.0,0.0
+categorical__district_Gaya,0.0,0.0
+categorical__district_Chhindwara,0.0,0.0
+categorical__implementing_agency_State Industrial Dev. Corp,0.0,0.0
+categorical__implementing_agency_POWERGRID/State Transco,0.0,0.0
+categorical__implementing_agency_NHAI,0.0,0.0
+categorical__implementing_agency_Indian Railways,0.0,0.0
+categorical__implementing_agency_Airports Authority of India,0.0,0.0
+categorical__project_type_Urban Metro Rail,0.0,0.0
+categorical__project_type_State Highway,0.0,0.0
+categorical__project_type_Special Economic Zone,0.0,0.0
+categorical__project_type_Mining Project,0.0,0.0
+categorical__project_type_Renewable Energy Park,0.0,0.0
+categorical__project_type_Railway Line/Doubling,0.0,0.0
+categorical__project_type_Power Transmission Line,0.0,0.0
+categorical__project_type_Industrial Corridor,0.0,0.0
+categorical__project_type_Irrigation Canal/Dam,0.0,0.0
+categorical__district_Varanasi,0.0,0.0
+categorical__district_Warangal,0.0,0.0
+categorical__district_Purulia,0.0,0.0
+categorical__district_Ranchi,0.0,0.0
+categorical__district_Vadodara,0.0,0.0
+categorical__district_Udaipur,0.0,0.0
+categorical__district_Thiruvananthapuram,0.0,0.0
+categorical__district_Tiruchirappalli,0.0,0.0
+categorical__district_Surat,0.0,0.0
+categorical__project_geometry_type_Point,0.0,0.0
+"categorical__applicable_land_acquisition_act_Railways Act, 1989",0.0,0.0
+categorical__project_geometry_type_Area,0.0,0.0
+categorical__implementing_agency_State SEZ Authority,0.0,0.0
+categorical__implementing_agency_State Water/Municipal Board,0.0,0.0
+categorical__implementing_agency_State Irrigation Dept,0.0,0.0
+categorical__implementing_agency_State Metro Rail Corp,0.0,0.0
+categorical__implementing_agency_State Mining Corp,0.0,0.0
+categorical__implementing_agency_State PWD,0.0,0.0
+categorical__critical_approval_pending_flag_as_of_snapshot_True,0.0,0.0
+categorical__critical_approval_pending_flag_as_of_snapshot_False,0.0,0.0
+categorical__current_stage_name_Survey & Measurement,0.0,0.0
+categorical__current_stage_name_Preliminary Notification (Sec 11),0.0,0.0
+categorical__current_stage_name_Mutation & Handover,0.0,0.0
+categorical__current_stage_name_Possession,0.0,0.0
+categorical__current_stage_name_Final Declaration (Sec 19),0.0,0.0
+categorical__current_stage_name_Draft Declaration,0.0,0.0
+categorical__land_type_required_Mixed,0.0,0.0
+categorical__tribal_area_flag_True,0.0,0.0
+categorical__tribal_area_flag_False,0.0,0.0
+categorical__implementing_agency_State Renewable Energy Agency,0.0,0.0
+"categorical__applicable_land_acquisition_act_National Highways Act, 1956",0.0,0.0
+"categorical__applicable_land_acquisition_act_Coal Bearing Areas Acquisition Act, 1957",0.0,0.0
+categorical__compensation_dispute_flag_as_of_snapshot_False,0.0,0.0
+categorical__compensation_dispute_flag_as_of_snapshot_True,0.0,0.0
+categorical__local_body_resolution_status_Not Sought,0.0,0.0
+categorical__rr_plan_approved_flag_as_of_snapshot_False,0.0,0.0
+categorical__rr_plan_approved_flag_as_of_snapshot_True,0.0,0.0
+categorical__political_sensitivity_index_High,0.0,0.0
+categorical__stay_order_active_flag_as_of_snapshot_True,0.0,0.0
+categorical__stay_order_active_flag_as_of_snapshot_False,0.0,0.0
+categorical__high_court_or_above_case_flag_as_of_snapshot_True,0.0,0.0
+categorical__high_court_or_above_case_flag_as_of_snapshot_False,0.0,0.0
+categorical__local_body_resolution_status_Supportive,0.0,0.0
+categorical__funds_availability_status_as_of_snapshot_Adequate,0.0,0.0
+categorical__next_stage_name_at_snapshot_Final Declaration (Sec 19),0.0,0.0
+categorical__next_stage_name_at_snapshot_Draft Declaration,0.0,0.0
+categorical__next_stage_name_at_snapshot_Mutation & Handover,0.0,0.0
+categorical__next_stage_name_at_snapshot_Preliminary Notification (Sec 11),0.0,0.0
+categorical__next_stage_name_at_snapshot_Social Impact Assessment (SIA),0.0,0.0
+categorical__next_stage_name_at_snapshot_Survey & Measurement,0.0,0.0

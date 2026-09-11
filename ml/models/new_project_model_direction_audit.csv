@@ -1,0 +1,17 @@
+feature,coefficient,expected,actual,correct
+total_land_required_hectares,0.14085006838556316,positive,positive,True
+number_of_villages_affected,0.07214375104964625,positive,positive,True
+estimated_project_cost_inr_crore,-0.05885760648815081,positive,negative,False
+planned_land_acquisition_duration_days,0.006750359163744161,positive,positive,True
+percent_land_clear_title,-0.11449300487313857,negative,negative,True
+percent_land_disputed_ownership,0.1311951621008238,positive,positive,True
+consent_percent_obtained,-0.09095310989661211,negative,negative,True
+number_of_landowners,0.00019413377831456322,positive,positive,True
+mutation_pending_percent,0.014641026978079116,positive,positive,True
+approvals_required_count,0.10057525030123478,positive,positive,True
+active_legal_cases_count,0.11935757952235941,positive,positive,True
+public_hearing_objections_count,0.022582765738960096,positive,positive,True
+political_sensitivity_index,0.08271635359088185,positive,positive,True
+state_historical_avg_delay_days,-0.020645728862189103,positive,negative,False
+agency_historical_completion_rate,-0.11282548708005535,negative,negative,True
+project_type_historical_delay_rate,-0.041514634734125686,positive,negative,False

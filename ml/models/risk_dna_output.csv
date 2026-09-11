@@ -1,0 +1,6 @@
+snapshot_id,project_id,risk_probability,risk_level,driver_rank,risk_driver,driver_category,shap_contribution
+SNAP-000290-1,SIH26017-PRJ-000290,0.9609301686286926,HIGH,1,planned land acquisition duration days,Process / Stage,1.9748971462249756
+SNAP-000290-1,SIH26017-PRJ-000290,0.9609301686286926,HIGH,2,total land required hectares,Project Characteristics,1.1016675233840942
+SNAP-000290-1,SIH26017-PRJ-000290,0.9609301686286926,HIGH,3,cumulative stage delay days as of snapshot,Process / Stage,0.38149604201316833
+SNAP-000290-1,SIH26017-PRJ-000290,0.9609301686286926,HIGH,4,project type historical delay rate,Process / Stage,0.27492743730545044
+SNAP-000290-1,SIH26017-PRJ-000290,0.9609301686286926,HIGH,5,land type required Agricultural,Project Characteristics,0.2240069955587387

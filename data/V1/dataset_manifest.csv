@@ -1,0 +1,12 @@
+file,rows,columns
+projects.csv,600,16
+stage_progress.csv,5400,11
+approvals.csv,2729,9
+compensation.csv,600,13
+legal_cases.csv,493,11
+land_records.csv,600,13
+rr_progress.csv,600,11
+stakeholder.csv,600,10
+administration.csv,600,11
+project_outcomes.csv,600,7
+project_snapshots.csv,953,63
